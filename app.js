@@ -32,25 +32,19 @@ getResult(); // calls the function to get te result
 
 
  const getResult = () => { // gets the result, which is to be displayed
-    if(computerChoice == userChoice) {
+    if(computerChoice == userChoice) { 
         result = "It's a draw!";
     }
-    if(computerChoice == 'rock' && userChoice == 'paper') {
+   else if(computerChoice == 'rock' && userChoice == 'paper') {
         result = "You Won!";
     }
-    if(computerChoice == 'rock' && userChoice == 'scissors') {
-        result = "You Lost!";
-    }
-    if(computerChoice == 'paper' && userChoice == 'scissors') {
+    else if(computerChoice == 'paper' && userChoice == 'scissors') {
         result = "You Won!";
     }
-    if(computerChoice == 'paper' && userChoice == 'rock') {
-        result = "You Lost!";
-    }
-    if(computerChoice == 'scissors' && userChoice == 'rock') {
+   else if(computerChoice == 'scissors' && userChoice == 'rock') {
         result = "You Won!";
     }
-    if(computerChoice == 'scissors' && userChoice == 'paper') {
+    else {
         result = "You Lost!";
     }
     resultDisplay.innerHTML = result; // shows the result
